@@ -160,12 +160,18 @@ class ApplicantForm extends Component implements HasActions, HasSchemas
 
                             FormQuestionBuilder::make(Radio::class, 'APL_Career_Interest')
                                 ->options(['Yes' => 'Yes', 'No' => 'No'])
-                                ->inline(),
-                            FormQuestionBuilder::make(Textarea::class, 'APL_Career_Details')->nullable(),
+                                ->inline()
+                                ->live(),
+                            FormQuestionBuilder::make(Textarea::class, 'APL_Career_Details')
+                                ->label('Please provide additional details')
+                                ->visible(fn(Get $get) => $get('APL_Career_Interest') == 'Yes'),
                             FormQuestionBuilder::make(Radio::class, 'APL_Experience')
                                 ->options(['Yes' => 'Yes', 'No' => 'No'])
-                                ->inline(),
-                            FormQuestionBuilder::make(Textarea::class, 'APL_Experience_Details')->nullable(),
+                                ->inline()
+                                ->live(),
+                            FormQuestionBuilder::make(Textarea::class, 'APL_Experience_Details')
+                                ->label('Please provide additional details')
+                                ->visible(fn(Get $get) => $get('APL_Experience') == 'Yes'),
                         ]),
 
                     // Step 3: Programme Interest
@@ -175,19 +181,50 @@ class ApplicantForm extends Component implements HasActions, HasSchemas
                             FormQuestionBuilder::make(TextInput::class, 'APL_Cohort'),
                             FormQuestionBuilder::make(Radio::class, 'APL_Obligations')
                                 ->options(['Yes' => 'Yes', 'No' => 'No'])
-                                ->inline(),
-                            FormQuestionBuilder::make(Textarea::class, 'APL_Obligation_Details')->nullable(),
+                                ->inline()
+                                ->live(),
+                            FormQuestionBuilder::make(Textarea::class, 'APL_Obligation_Details')
+                                ->label('Please provide additional details')
+                                ->visible(fn(Get $get) => $get('APL_Obligations') == 'Yes'),
                             FormQuestionBuilder::make(Textarea::class, 'APL_Vision'),
 
                             FormQuestionBuilder::make(Radio::class, 'APL_MSYA_Beneficiary')
                                 ->options(['Yes' => 'Yes', 'No' => 'No'])
-                                ->inline(),
-                            FormQuestionBuilder::make(Textarea::class, 'APL_MSYA_Beneficiary_Details')->nullable(),
+                                ->inline()
+                                ->live(),
+                            FormQuestionBuilder::make(Textarea::class, 'APL_MSYA_Beneficiary_Details')
+                                ->label('Please provide additional details')
+                                ->visible(fn(Get $get) => $get('APL_MSYA_Beneficiary') == 'Yes'),
 
                             Group::make([
-                                FormQuestionBuilder::make(TextInput::class, 'APL_Coverall_Size'),
-                                FormQuestionBuilder::make(TextInput::class, 'APL_Boot_Size'),
-                                FormQuestionBuilder::make(TextInput::class, 'APL_Glove_Size'),
+                                FormQuestionBuilder::make(Select::class, 'APL_Coverall_Size')->options([
+                                    'X-Small' => 'X-Small',
+                                    'Small' => 'Small',
+                                    'Medium' => 'Medium',
+                                    'Large' => 'Large',
+                                    'X-Large' => 'X-Large',
+                                    '2X-Large' => '2X-Large',
+                                    '3X-Large' => '3X-Large',
+                                    '4X-Large' => '4X-Large',
+                                    '5X-Large' => '5X-Large',
+                                ])->placeholder('Select Coverall Size'),
+                                FormQuestionBuilder::make(Select::class, 'APL_Boot_Size')->options([
+                                    'Size 6' => 'Size 6',
+                                    'Size 7' => 'Size 7',
+                                    'Size 8' => 'Size 8',
+                                    'Size 9' => 'Size 9',
+                                    'Size 10' => 'Size 10',
+                                    'Size 11' => 'Size 11',
+                                    'Size 12' => 'Size 12',
+                                    'Size 13' => 'Size 13',
+                                    'Size 14' => 'Size 14',
+                                ])->placeholder('Select Boot Size'),
+                                FormQuestionBuilder::make(Select::class, 'APL_Glove_Size')->options([
+                                    'Small' => 'Small',
+                                    'Medium' => 'Medium',
+                                    'Large' => 'Large',
+                                    'X-Large' => 'X-Large',
+                                ])->placeholder('Select Glove Size'),
                             ])->columns(3)->columnSpanFull(),
                         ]),
 

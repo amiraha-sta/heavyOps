@@ -1,16 +1,22 @@
 <div class="py-8">
     <div class="bg-gradient-to-r from-teal-50 to-purple-50 border border-teal-200 rounded-lg p-6 mb-6">
-        <h1 class="text-3xl font-bold text-gray-800 mb-2">H.O.S.T</h1>
-        <h2 class="text-xl font-semibold text-teal-600 mb-4 italic">"Hospitality Operations and Service Training"</h2>
+        <h1 class="text-3xl font-bold text-gray-800 mb-2">HEAVY OPS</h1>
+            <h2 class="text-xl font-semibold text-teal-600 mb-4 italic">"HEAVY EQUIPMENT TRAINING "</h2>
         
         <div class="prose prose-gray max-w-none">
             <p class="text-gray-700 leading-relaxed mb-4">
-                The Ministry of Sport and Youth Affairs (MSYA), is pleased to invite young people to register for a one-week, hands-on, industry-standard training experience in the Food and Beverage Service industry.
+                Launch your career in the heavy machinery industry with Project HEAVY OPS, a specialized initiative by the Ministry of Sport and Youth Affairs designed to equip youth with certified technical skills and safety training. This program bridges the gap between vocational education and market demand, providing a pathway to employment in the construction, logistics, and manufacturing sectors.
             </p>
 
             <ul class="list-disc pl-6 text-gray-700 mb-4">
-                <li>Participants must be between the ages of 18–35 years</li>
-                <li>Selected participants are required to wear a white shirt and black pants or a skirt for practical sessions.</li>
+                <li>Participants must be between the ages of 21- 35 years old</li>
+                <li>Applicants must be nationals of Trinidad and Tobago</li>
+                <li>pplicants must possess at least a School Leaving Certificate or equivalent.</li>
+                <li>All applicants must possess a valid Trinidad and Tobago Class 3 manual License with a minimum of one (1) year driving experience.</li>
+                <li>Participants must be committed to attending all sessions of the training programme, including practical and theoretical components.</li>
+
+
+
             </ul>
 
             <p class="font-bold italic"><br><strong class="text-red-500 "> DISCLAIMER: </strong>    Completing the registration does not mean you are accepted for the programme. Only shortlisted participants will be contacted.</p>
