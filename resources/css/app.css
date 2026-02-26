@@ -40,3 +40,14 @@
     font-weight: normal;
     font-style: normal;
 }
+
+
+/* Hide scrollbar but still allow scrolling */
+.scrollbar-none::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-none {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
